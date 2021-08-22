@@ -43,7 +43,7 @@ window.addEventListener('load',function(){
    
  
    web3.eth.getNodeInfo(function(err,accounts){
- 
+ j1
       if(accounts[0] !== undefined){
  
       web3.eth.getAccounts(function(err,values){
