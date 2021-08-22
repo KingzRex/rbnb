@@ -41,6 +41,7 @@
           <li><a id="meet">Community</a></li>
 
           <li><a class="cta" href="/src/buynow.html">Buy $RBNB</a></li>
+          <!-- <li><a class="cta"  id="connectBtn" onclick="ConnectMetamask()">Connect</a></li> -->
         </ul>
       </div>
     </nav>
@@ -58,7 +59,7 @@
                 $RBNB is the native token for the hybrid DeFi – NFT ecosystem.
                 This project is made for the large expanse of the BSC network.
               </p>
-              <a href="/src/buynow.html">Buy $RBNB Now!</a>
+              <a href="/src/buynow.html">Claim $RBNB Now!</a>
             </div>
             <div class="illus-box col-xs -12 col-sm-12 col-md-6">
               <img src="/src/img/illus-1.svg" alt="" />
@@ -208,3 +209,26 @@
     <script src="/src/index.js"></script>
   </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <script type="text/javascript">
+  // window.web3 = new Web3();
+  var ethereum = window.ethereum;
+  var web3 = new Web3(window.ethereum);
+
+async function ConnectMetamask(){
+    console.log(web3.eth.getAccounts[0])
+    if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+       var accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+       if(accounts[0]){
+         setAccount(accounts[0]);
+       }
+    }else{
+        alert('Please install MetaMask!');
+    }
+}
+
+
+</script>
