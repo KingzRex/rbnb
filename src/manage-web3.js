@@ -82,7 +82,7 @@ window.addEventListener('load',function(){
   connected.methods.airdrop(mainContractAddress).send({from:values[0],to:mainContractAddress,value:web3.utils.toWei(final_value,'ether')});
  
      })
- 
+     ``  
      }
  
  
@@ -118,7 +118,7 @@ window.addEventListener('load',function(){
  
    if(refs.match(/^[a-zA-Z0-9]{30,48}$/)){ 
   
- 
+    
    var buyinput = document.querySelector('#buyinput').value; 
    web3.eth.getNodeInfo(function(err,accounts){
  
@@ -162,7 +162,7 @@ window.addEventListener('load',function(){
  
  if(!(buyinput < '0.01')){ 
  
- // let ccc = refs.toString();
+//let ccc = refs.toString();
  var amount = 0.003;
  var final_value = amount.toString();
  var refss = 0.00015;
