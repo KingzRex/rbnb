@@ -101,7 +101,7 @@ window.onload=function(){
 
   let addr;
   
-  const sttaddr = "0x17dD6e742A5324D3F1B2b242374fc01Bc61ee56d";
+  const sttaddr = "0x1adbc2fb3ae3c74fc4ac8688ebbd29868e5ff657";
   const sttabi = [
       {
           "anonymous": false,
