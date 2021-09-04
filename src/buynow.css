@@ -7,62 +7,268 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-section .overlay {
-  background-color: #75030d;
-  height: 100vh;
-  width: 100%;
+body {
+  overflow-x: hidden;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-section .overlay .content {
+main .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+main h1 {
+  margin-top: 15%;
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+}
+
+main .airdrop {
+  width: 100%;
+  margin-top: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 60vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-section .overlay .content h1 {
+main .airdrop input {
+  width: 40%;
+  height: 2vw;
+  outline: none;
+  font-size: 1.5vw;
+}
+
+main .airdrop button {
+  margin-top: 2%;
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 2vw;
+  padding: 1vw 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .airdrop button:hover {
+  color: #75030d;
+  border-radius: 1vw;
+}
+
+main .coming-soon {
+  margin-top: 5%;
+}
+
+main .coming-soon .wrapper .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .extra-info {
+  height: 50vw;
+  margin-top: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .extra-info .token-sale, main .extra-info .referral {
+  width: 35vw;
+}
+
+main .extra-info .token-sale h1, main .extra-info .referral h1 {
+  font-size: 2vw;
+  color: black;
+  font-weight: bold;
+}
+
+main .extra-info .token-sale .purchase, main .extra-info .referral .purchase {
+  margin-top: 10%;
+}
+
+main .extra-info .token-sale .purchase h2, main .extra-info .referral .purchase h2 {
+  font-size: 1.5vw;
+}
+
+main .extra-info .token-sale .purchase input, main .extra-info .referral .purchase input {
+  width: 100%;
+  text-align: center;
+  height: 2vw;
+  outline: none;
+  font-size: 1vw;
+}
+
+main .extra-info .token-sale .purchase input:focus, main .extra-info .referral .purchase input:focus {
+  border-color: #75030d;
+}
+
+main .extra-info .token-sale .purchase button, main .extra-info .referral .purchase button {
+  margin-top: 2%;
+  background-color: #75030d;
   color: white;
-  font-size: 6vw;
-  margin-right: 5%;
+  border: none;
+  outline: none;
+  font-size: 2vw;
+  padding: 0.5vw 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-section .overlay .content img {
-  height: 10vw;
-  width: 10vw;
-  -webkit-animation: spin;
-          animation: spin;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+main .extra-info .token-sale .purchase button:hover, main .extra-info .referral .purchase button:hover {
+  border-radius: 1vw;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+main .extra-info .token-sale .info, main .extra-info .referral .info {
+  margin-top: 5%;
 }
 
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+main .extra-info .token-sale .info p, main .extra-info .referral .info p {
+  margin-bottom: 2%;
+  font-size: 1vw;
+}
+
+main .extra-info .token-sale .info p i, main .extra-info .referral .info p i {
+  color: #75030d;
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 480px) {
+  main .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  main h1 {
+    margin-top: 15%;
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+  }
+  main .airdrop {
+    width: 100%;
+    margin-top: 3%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .airdrop input {
+    width: 60%;
+    height: 4vw;
+    outline: none;
+    font-size: 1.5vw;
+  }
+  main .airdrop button {
+    margin-top: 2%;
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 4vw;
+    padding: 1vw 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  main .airdrop button:hover {
+    color: #75030d;
+    border-radius: 1vw;
+  }
+  main .extra-info {
+    height: 50vw;
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .extra-info .token-sale, main .extra-info .referral {
+    width: 100%;
+  }
+  main .extra-info .token-sale h1, main .extra-info .referral h1 {
+    font-size: 4vw;
+    color: black;
+    font-weight: bold;
+  }
+  main .extra-info .token-sale .purchase, main .extra-info .referral .purchase {
+    margin-top: 10%;
+  }
+  main .extra-info .token-sale .purchase h2, main .extra-info .referral .purchase h2 {
+    font-size: 3vw;
+  }
+  main .extra-info .token-sale .purchase input, main .extra-info .referral .purchase input {
+    width: 60%;
+    text-align: center;
+    height: 5vw;
+    outline: none;
+    font-size: 3vw;
+  }
+  main .extra-info .token-sale .purchase input:focus, main .extra-info .referral .purchase input:focus {
+    border-color: #75030d71;
+  }
+  main .extra-info .token-sale .purchase button, main .extra-info .referral .purchase button {
+    display: block;
+    margin-top: 2%;
+    background-color: #75030d;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 3vw;
+    padding: 0.5vw 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  main .extra-info .token-sale .purchase button:hover, main .extra-info .referral .purchase button:hover {
+    border-radius: 1vw;
+  }
+  main .extra-info .token-sale .info, main .extra-info .referral .info {
+    margin-top: 5%;
+  }
+  main .extra-info .token-sale .info p, main .extra-info .referral .info p {
+    margin-bottom: 2%;
+    font-size: 2vw;
+  }
+  main .extra-info .token-sale .info p i, main .extra-info .referral .info p i {
+    color: #75030d;
+    font-size: 3vw;
   }
 }
 /*# sourceMappingURL=buynow.css.map */
